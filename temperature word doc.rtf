@@ -1,0 +1,104 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}}
+{\colortbl ;\red255\green0\blue0;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\cf1\b\f0\fs36\lang9                    Product Requirement Document\ul\par
+\par
+Temperature finding based on location or Pin code\par
+\par
+Purpose of the product:\par
+\cf0\ulnone\b0 The purpose of this product is to provide a user-friendly and efficient solution for finding the temperature of a specific location based on either its pincode or geographic coordinates. This tool will cater to a wide range of users, including travelers, weather enthusiasts, and anyone seeking up-to-date temperature information for a specific area.\par
+\par
+\cf1\ul\b Actors/Users:\cf0\ulnone\b0\par
+\b User\b0 : The end-user who interacts with the application to request temperature information for a particular location using either the pincode or geographic coordinates.\par
+\b Location Data Provider\b0 : The service or API that provides location data, including temperature, based on the user's query.\par
+\par
+\cf1\ul\b Features:\cf0\ulnone\b0\par
+ 1. \b Location Input\par
+\b0 The user can enter either a pincode or geographic coordinates (latitude and longitude) as the location query.\par
+The system should validate the input to ensure it is a valid pincode or valid geographic coordinates.\par
+2. \b Location Data Retrieval\par
+\b0 The system should interact with the designated location data provider to fetch temperature information for the given location.\par
+If the input is a pincode, the system will use geocoding services to obtain the corresponding geographic coordinates.\par
+If the input is geographic coordinates, the system will directly use them to fetch temperature data.\par
+3. \b Temperature Display\par
+\b0 Once the location data is retrieved successfully, the system will display the current temperature in Celsius or Fahrenheit, along with a timestamp indicating the time of the temperature reading.\par
+The system will also provide additional weather-related information, such as weather conditions (e.g., sunny, rainy, cloudy) and humidity levels.\par
+4. \b Unit Conversion\par
+\b0 The user should have the option to choose between Celsius and Fahrenheit for temperature display.\par
+The system will perform the necessary unit conversion based on the user's preference.\par
+5\b . Error Handling\par
+\b0 The system should handle errors gracefully in case of invalid input, network issues, or unavailability of temperature data for a specific location.\par
+Appropriate error messages should be displayed to the user, guiding them on how to correct the input or try again later.\par
+\par
+\cf1\ul\b Dependencies:\cf0\ulnone\b0\par
+1. \b Location Data Provider API\par
+\b0 The system will rely on a third-party location data provider or weather API to fetch temperature data based on the given location query.\par
+The availability and response time of this API will directly impact the system's performance.\par
+2. \b Geocoding Service (if using pincode)\par
+\b0 If the user provides a pincode as input, the system will require access to a geocoding service to convert the pincode to geographic coordinates for fetching temperature data.\par
+3. \b Internet Connectivity\b0\par
+The system will require a stable internet connection to interact with the location data provider API and retrieve temperature information.\par
+4. \b User Interface\par
+\b0 The product will need a user interface (UI) through which the user can interact with the system, enter the location query, and view the temperature information.\par
+\par
+\cf1\b Use Cases:\par
+1.\cf0\b0 User Retrieves Current Temperature\par
+   Actor: User\par
+  \b Description\b0 : The user wants to know the current   temperature at a specific location. They enter either the pin code or geographic coordinates of the location in the application.\par
+\b System Response\b0 : The application retrieves the current temperature for the specified location and displays it to the user in Celsius or Fahrenheit along with additional weather information.\par
+2\b .User Chooses Temperature Unit\b0\par
+\b Actor\b0 : User\par
+\b Description\b0 : After receiving the temperature information, the user decides to view the temperature in a different unit (Celsius or Fahrenheit).\par
+\b System Response\b0 : The application allows the user to switch between Celsius and Fahrenheit units and updates the temperature display accordingly.\par
+3\b .User Views Weather Conditions\par
+\b0 Actor: User\par
+Description: \fs32 The user wants to know more than just the temperature. They want to see additional weather conditions such as whether it's sunny, rainy, cloudy, etc.\par
+\fs36 System Response: \fs32 The application provides additional weather-related information, including weather conditions and humidity levels, based on the location data.\par
+\fs36 4.\b Invalid Location Input\par
+\b0 Actor: User\par
+Description: \fs32 The user enters an invalid pin code or geographic coordinates in the application\fs36 .\par
+System Response: \fs32 The application detects the invalid input and displays an error message guiding the user to provide a valid pin code or geographic coordinates\fs36 .\par
+5.\b Location Data Unavailable\par
+\b0 Actor: User\par
+Description: \fs32 The user enters a valid location, but the system cannot retrieve temperature data for that location due to unavailability in the data provider.\par
+\fs36 System Response: \fs32 The application displays an error message indicating that temperature data for the specified location is currently unavailable and suggests trying again later.\par
+\fs36 6.\b User Retrieves Weather Forecast\par
+\b0 Actor: User\par
+Description: \fs32 The user is planning a trip and wants to know the weather forecast for a specific location in the future.\par
+\fs36 System Response: \fs32 The application provides a weather forecast for the selected location, showing temperature trends and predicted weather conditions for the upcoming days.\par
+\fs36 7.\b Historical Temperature Data\par
+\b0 Actor: User\par
+Description: \fs32 The user wants to explore past weather patterns or compare historical temperature data for a particular location.\par
+\fs36 System Response: \fs32 The application offers access to historical temperature data, allowing the user to view temperature trends over a specified period.\par
+\fs36 8.\b Mobile Access:\par
+\b0 Actor: User\par
+Description: \fs32 The user accesses the application on their mobile device while on the go.\par
+\fs36 System Response: \fs32 The application is optimized for mobile devices, providing a user-friendly experience and ensuring seamless access to temperature information\fs36 .\par
+9.\b Integration with Maps\par
+\b0 Actor: User\par
+Description: \fs32 The user wants to visualize the location and its temperature on a map.\par
+\fs36 System Response: \fs32 The application integrates with maps, allowing the user to see the location on a map and get temperature information with a map-based interface.\par
+\fs36 10.\b Privacy and Data Security\par
+\b0 Actor: User\par
+Description:   \fs32 The user is concerned about their data privacy and security while using the application\fs36 .\par
+System Response:    \fs32 The application ensures data security and complies with relevant data protection regulations, giving the user confidence in using the service.\par
+\fs36\par
+\b Additional Considerations:\par
+\b0 The product should be mobile-friendly to cater to users accessing the service from their smartphones and tablets.\par
+To enhance user experience, the system can offer additional features such as weather forecast, historical temperature data, and integration with maps for visual representation.\par
+Privacy and data security should be ensured, and the product should comply with relevant data protection regulations.\cf1\ul\b\par
+\cf0\ulnone\b0\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\cf1\ul\b\par
+}
+ 
